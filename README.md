@@ -41,8 +41,10 @@
         http://api.napster.com/v2.2/albums/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4
 
 3. Milestone 3 - Functional Requirements
+
     **Pagination**
 - In case of multiple records page should have pagination option to display data in card layout
+
     **Implement Authentication**
 - User should not be able to add anything in favorites & recommendation list until logged in.
 - Create Login Page
