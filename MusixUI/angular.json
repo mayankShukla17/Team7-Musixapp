@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MusixUI"
+    }
+  },
+  "defaultProject": "MusixUI",
+  "cli": {
+    "analytics": false
+  }
 }
