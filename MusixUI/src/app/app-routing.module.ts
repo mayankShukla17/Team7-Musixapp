@@ -28,9 +28,9 @@ import { PostGuardGuard } from './service/post-guard.guard';
 
 
 const routes: Routes = [
-  {
-    path:'',component:HomeComponent
-  },
+   {
+     path:'',component:HomeComponent
+   },
   {path :'signup',
    component:SignUpComponent,canActivate:[PostGuardGuard]
 },
