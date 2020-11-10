@@ -1,6 +1,6 @@
 # Team-7 Musix App
 
-## Back-end Recommendation-Service 
+## Back-end User-Service 
 
 1. Milestone 3 - Functional Requirements
 
