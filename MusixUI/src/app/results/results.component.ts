@@ -84,25 +84,8 @@ export class ResultsComponent implements OnInit,OnChanges {
 
  
 
-  // add(note)
-  //   {
-  //     let objfev={
-  //       username:this._interactionService.getMessage(),
-  //       songname:note.trackName,
-  //       artist:note.artist,
-  //       url:note.url,
-        
-        
   
-  //     }
-  //     console.log(note);
-  //     console.log(objfev);
-  // this.httpClient.post('http://localhost:8001/favourite/saveSong',objfev).toPromise().then((data:any)=>{
-  //   console.log(data);
-  // });
-  
-  //   }
-//////////////////////////////////////////
+
 favToggleFunction(num:any,note){
   // console.log("func is called & num is "+ note);
   var elem = document.getElementById(String(num));
@@ -143,7 +126,6 @@ favToggleFunction(num:any,note){
 }
 
 
-////////////////////////////////////////////
     
 
     recommend(note)
