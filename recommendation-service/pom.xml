@@ -12,7 +12,7 @@
 	<artifactId>recommendation-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>recommendation-service</name>
-	<description>Spring Boot for Musix project </description>
+	<description>Recommendation Service for Musix project</description>
 
 	<properties>
 		<java.version>11</java.version>
