@@ -11,24 +11,44 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RecommendationComponent implements OnInit {
 
-  favList:Favourite[]=[];
-   p:any;
+  favList: Favourite[] = [];
+  p: any;
+  cname: string = "fa fa-heart";
   //@Input() uname:string;
-  
-
-  getNotes(): Observable<any>  {
-    return this.httpClient.get(`http://localhost:8004/recommend/getrecommendSong/msuyog`);
-  }
-  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getNotes().subscribe(
-      res=>
-      {
-        this.favList=res;
+      res => {
+        this.favList = res;
+      });
+  }
+
+  getNotes(): Observable<any> {
+    return this.httpClient.get(`http://localhost:8004/recommend/getrecommendSong/${sessionStorage.getItem('loggedUser')}`);
+  }
+  constructor(private httpClient: HttpClient) { }
+  delete(num: any, note) {
+    var elem = document.getElementById(String(num));
+    if (elem["classList"].value === "fa fa-heart") {
+      elem["classList"].value = "fa fa-heart-o";
+      let objfev = {
+        //username:this._interactionService.getMessage(),
+        username: sessionStorage.getItem('loggedUser'),
+        songname: note.trackName,
+        artist: note.artist,
+        url: note.url,
+      }
+      console.log(note);
+
+      console.log(objfev);
+      this.httpClient.post('http://localhost:8004/recommend/removeSong', objfev).toPromise().then((data: any) => {
+        console.log(data);
+      });
     }
+    this.ngOnInit();
+    // location.reload()
+  }
 
-    )}
 
-  
+
 }

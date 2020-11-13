@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.stackroute.musixapp.exception.SongNotExistsException;
 import com.stackroute.musixapp.model.Recommend;
 import com.stackroute.musixapp.service.RecommendService;
 
@@ -24,39 +25,45 @@ public class RecommendController {
 
 	@Autowired
 	private RecommendService recs;
-	
-	
+
 	@PostMapping("/recommendSong")
-	public ResponseEntity<?> saveSong(@RequestBody Recommend b)
-		 {
-			ResponseEntity<?> rs = null;
-			try {
-				Recommend bk = recs.saveModel(b);
-				if(bk != null)
-					rs = ResponseEntity.
-						status(HttpStatus.CREATED).build();
-				else
-			rs = ResponseEntity.
-				status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-			}
-			catch(Exception e) {
-		rs = ResponseEntity.status(HttpStatus.CONFLICT).build();
-			}
-			return rs;
+	public ResponseEntity<?> saveSong(@RequestBody Recommend b) {
+		ResponseEntity<?> rs = null;
+		try {
+			Recommend bk = recs.saveModel(b);
+			if (bk != null)
+				rs = ResponseEntity.status(HttpStatus.CREATED).build();
+			else
+				rs = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		} catch (Exception e) {
+			rs = ResponseEntity.status(HttpStatus.CONFLICT).build();
 		}
-	
+		return rs;
+	}
+
 	@GetMapping("/getrecommendSong/{username}")
-	public ResponseEntity<?> getSong(@PathVariable("username") String username)
-		throws Exception
-	{
+	public ResponseEntity<?> getSong(@PathVariable("username") String username) throws Exception {
 		ResponseEntity<?> rs = null;
 		try {
 			List<Recommend> b = recs.getModelByEmail(username);
 			rs = ResponseEntity.status(HttpStatus.OK).body(b);
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			rs = ResponseEntity.status(HttpStatus.CONFLICT).build();
 		}
+		return rs;
+	}
+
+	@PostMapping("/removeSong")
+	public ResponseEntity<?> removeSong(@RequestBody Recommend rec) throws SongNotExistsException {
+		ResponseEntity<?> rs = null;
+		try {
+			Recommend bk = recs.removeModel(rec);
+			if (bk != null)
+				rs = ResponseEntity.status(HttpStatus.CREATED).build();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		return rs;
 	}
 }

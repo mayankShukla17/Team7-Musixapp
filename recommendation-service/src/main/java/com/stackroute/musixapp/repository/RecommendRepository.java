@@ -7,8 +7,12 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.stackroute.musixapp.model.Recommend;
 
-public interface RecommendRepository  extends MongoRepository<Recommend,Integer>{
+public interface RecommendRepository extends MongoRepository<Recommend, Integer> {
 	Optional<Recommend> findByUsername(String username);
+
 	List<Recommend> findAllByUsername(String username);
-	Optional<Recommend> findByUsernameAndUrl(String username,String url);
+
+	Optional<Recommend> findByUsernameAndUrl(String username, String url);
+
+	Recommend deleteByUsernameAndUrl(String username, String url);
 }
