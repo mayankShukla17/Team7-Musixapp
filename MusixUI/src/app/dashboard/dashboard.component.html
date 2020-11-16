@@ -9,22 +9,24 @@
 
 <mat-card id="card" style="text-align: center;">
     <mat-card-title>
-        Welcome to MusicApp
+        <!-- Welcome to MusicApp -->
+        <app-search></app-search>
     </mat-card-title>
 
     <br>
 
     <mat-card-content>
-        <button type="button" class="btn btn-primary btn-lg" [routerLink]="['../favourite']">Favourite</button>
+        <!-- <button type="button" class="btn btn-primary btn-lg" [routerLink]="['../favourite']">Favourite</button>
         <br>
         <br>
 
         <button type="button" class="btn btn-primary btn-lg" [routerLink]="['../recommendation']">Recommendation</button>
-        <br>
-        <br>
+    <br>
+        <br> -->
 
-        <button type="button" class="btn btn-primary btn-lg" [routerLink]="['../search']">Search</button>
-
+        <!-- <button type="button" class="btn btn-primary btn-lg" [routerLink]="['../search']">Search</button> -->
+        <!-- <app-search></app-search> -->
+        <app-user-home></app-user-home>
 
     </mat-card-content>
 
@@ -54,6 +56,6 @@
     </div>
     <!--MDB -->
 
-
+    <!-- <app-home></app-home> -->
 
     <app-footer></app-footer>

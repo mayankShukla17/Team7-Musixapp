@@ -56,11 +56,12 @@ import { LogoutComponent } from './logout/logout.component';
 import { GuardGuard } from './service/guard.guard';
 import { PostGuardGuard } from './service/post-guard.guard';
 import { MyInterceptorServiceService } from './service/my-interceptor-service.service';
-
+import {UserHomeComponent} from './user-home/user-home.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    UserHomeComponent,
     SignUpComponent,
     LogInComponent,
     HinditrackComponent,
