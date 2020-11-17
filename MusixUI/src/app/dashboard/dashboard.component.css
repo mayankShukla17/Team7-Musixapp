@@ -1,3 +1,8 @@
+#card{
+  background: #16222A;
+  background: -webkit-linear-gradient(59deg, rgb(78, 134, 161), rgb(30, 58, 77));
+  background: linear-gradient(59deg, #3A6073, #16222A);
+}
 .navbar-icon-top .navbar-nav .nav-link > .fa {
     position: relative;
     width: 36px;

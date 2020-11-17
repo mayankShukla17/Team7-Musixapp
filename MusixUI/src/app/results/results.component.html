@@ -57,9 +57,11 @@
                 </td>
                 <td>
                 <button mat-button color="primary" (click)="recommend(track)">Recommend</button>
+                <!-- <input type="checkbox" checked mat-button (click)="recommend(track)" data-toggle="toggle" data-on="Recommend" data-off="Unrecommend" data-onstyle="success" data-offstyle="danger"> -->
               </td>
               <td>
                 <a href="{{track.url}}"><i class="fa fa-play-circle" style="font-size:40px;color:blueviolet"></i></a>
+                <!-- <a [routerLink]="['/login']" *ngIf ="!isLoggedIn$"><i class="fa fa-play-circle" style="font-size:40px;color:blueviolet"></i></a> -->
               </td>
               </h3>
               </div>

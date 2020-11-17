@@ -4,11 +4,20 @@
 html,
 body {
   height: 100%;
-}
-
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-image: "../assets/images/background1.jpg";
+  /* background-image: url(/assets/images/background1.jpg); */
+  /* background-repeat: no-repeat; */
+  background: #16222A;
+  background: -webkit-linear-gradient(59deg, rgb(78, 134, 161), rgb(30, 58, 77));
+  background: linear-gradient(59deg, #3A6073, #16222A);
 }
+
+/* body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url(/assets/images/background1.jpg);
+  background-repeat: no-repeat;
+  background-color: darkslategrey;
+} */
 
