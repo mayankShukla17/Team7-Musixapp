@@ -1,7 +1,10 @@
 #card{
-  background: #16222A;
+  /* background: #16222A;
   background: -webkit-linear-gradient(59deg, rgb(78, 134, 161), rgb(30, 58, 77));
-  background: linear-gradient(59deg, #3A6073, #16222A);
+  background: linear-gradient(59deg, #3A6073, #16222A); */
+  background-color: #7ee7c247 !important;
+  padding: 0;
+  /* background-color: #c5d0da !important; */
 }
 .navbar-icon-top .navbar-nav .nav-link > .fa {
     position: relative;
@@ -125,13 +128,19 @@
     font-weight: 100;
     color:rgb(6, 10, 18);
     font-family: 'Galada', cursive;
-  font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;
   }
   .txt3{
     text-align: justify;
     color: rgb(189, 81, 106);
     font-family: 'Galada', cursive;
-  font-family: 'Lobster', cursive;
-  font-family: 'Squada One', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Squada One', cursive;
   }
   
+  /* #ft{
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+
+  } */

@@ -1,3 +1,11 @@
+.bg-dark{
+  background-color: rgb(37, 37, 92) !important;
+}
+
+.glyphicon, .text{
+  color: white;
+}
+
 .navbar-icon-top .navbar-nav .nav-link > .fa {
     position: relative;
     width: 36px;
@@ -118,7 +126,8 @@
     font-family: 'Sofia', cursive;
     font-size: 30px;
     font-weight: bolder;
-    color: rgba(102, 225, 230, 0.897);
+    /* color: rgba(102, 225, 230, 0.897); */
+    color: white;
     padding-top: 10px;
   }
   
@@ -126,4 +135,5 @@
   #music1{
     color:tomato;
   }
+
   
