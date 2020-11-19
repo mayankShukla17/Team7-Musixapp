@@ -56,11 +56,14 @@
                     <span (click)="favToggleFunction(tracklist.indexOf(track),track)" class={{cname}} id ={{tracklist.indexOf(track)}} style="font-size:23px;color:blueviolet"> </span>
                 </td>
                 <td>
+
                 <!-- <button mat-button color="primary" (click)="recommend(track)">Recommend</button> -->
                 <mat-slide-toggle (click)="recommend(track)"></mat-slide-toggle>
+
               </td>
               <td>
                 <a href="{{track.url}}"><i class="fa fa-play-circle" style="font-size:40px;color:blueviolet"></i></a>
+                <!-- <a [routerLink]="['/login']" *ngIf ="!isLoggedIn$"><i class="fa fa-play-circle" style="font-size:40px;color:blueviolet"></i></a> -->
               </td>
               </h3>
               </div>

@@ -3,6 +3,7 @@ body {
 }
 .login-block {
     margin: 30px auto;
+    margin-top: 80px;
     min-height: 93.6vh
 }
 .login-block .auth-box {

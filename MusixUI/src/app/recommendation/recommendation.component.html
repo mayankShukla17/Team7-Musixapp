@@ -3,7 +3,7 @@
   <div class="album">
 
 
-    <h1>Recommendations</h1>
+    <h1 id="trec">Recommended Songs and Playlists</h1>
     <!-- <h3>Enjoy the recommended songs</h3> -->
     <mat-grid-list cols="3" rowHeight="500px">
       <mat-grid-tile *ngFor="let album of favList | paginate: {itemsPerPage: 12, currentPage:p};let i=index">
@@ -17,10 +17,15 @@
             
               <a href="{{album.url}}" class="fa fa-play-circle" style="font-size:48px;color:blueviolet"></a>
 
+
+              <!-- <a href="{{album.url}}" class="fa fa-play-toggle" style="font-size:48px;color:blueviolet"></a> -->
+
+
               <!-- <span (click)="delete(favList.indexOf(album),album)" class={{cname}} id ={{favList.indexOf(album)}} style="font-size:30px;color:blueviolet;margin-left: 20px;"> </span> -->
               <!-- <a href="{{album.url}}" class="fa fa-heart" style="font-size:48px;color:red"></a> -->
               <span (click)="delete(favList.indexOf(album),album)" class={{cname}} id ={{favList.indexOf(album)}} style="font-size:30px;color:blueviolet;margin-left: 20px;"> </span>
               
+              <!-- <mat-slide-toggle (click)="delete(favList.indexOf(album),album)" class={{cname}} id ={{favList.indexOf(album)}}></mat-slide-toggle> -->
             
 
             <!-- <button style="font-size:24px"> <a href="{{album.url}}"> <i class="fa fa-play"></i></a></button> -->
