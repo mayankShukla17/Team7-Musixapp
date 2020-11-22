@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
- import {MatButtonModule} from '@angular/material/button';
- 
- import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
- import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LogInComponent } from './log-in/log-in.component';
 
@@ -56,7 +56,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { GuardGuard } from './service/guard.guard';
 import { PostGuardGuard } from './service/post-guard.guard';
 import { MyInterceptorServiceService } from './service/my-interceptor-service.service';
-import {UserHomeComponent} from './user-home/user-home.component'
+import { UserHomeComponent } from './user-home/user-home.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,44 +85,34 @@ import {UserHomeComponent} from './user-home/user-home.component'
     FooterComponent,
     Dashboard1Component,
     HeaderComponent,
-    LogoutComponent
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-     MatButtonModule,
-   MatCheckboxModule,
-   MatToolbarModule, 
-   MatDatepickerModule,
-   HttpClientModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatDatepickerModule,
+    HttpClientModule,
     MaterialModule,
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
     MatButtonToggleModule,
     MatCardModule,
-  MatGridListModule,
-MatIconModule,
-ReactiveFormsModule,
-MatTooltipModule,
-MatExpansionModule,
-NgxPaginationModule
+    MatGridListModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatTooltipModule,
+    MatExpansionModule,
+    NgxPaginationModule,
+    FlexLayoutModule
   ],
-  providers: [TrackService,AudioService,MusicService,RouterService,UserService,GuardGuard,PostGuardGuard,
-    {provide:HTTP_INTERCEPTORS,useClass:MyInterceptorServiceService,multi:true}
-    ],
-    bootstrap: [AppComponent]
+  providers: [TrackService, AudioService, MusicService, RouterService, UserService, GuardGuard, PostGuardGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptorServiceService, multi: true }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
-
-
-
-
-
-
-
-

@@ -2,7 +2,7 @@
   <div class="results">
       <div class="album">
   
-        <app-search></app-search>
+        <!-- <app-search></app-search> -->
           <!-- <h1>Welcome to MusixApp</h1> -->
           <!-- <h3>Enjoy the recommended songs</h3> -->
           <mat-grid-list cols="3" rowHeight="500px">
@@ -20,7 +20,7 @@
                     alt="Photo not available"
                     
                   />
-                  <a href="{{album.url}}"><i class="fa fa-play-circle" style="font-size:48px;color:blueviolet"></i></a>
+                  <a *ngIf ="!isLoggedIn$" href="{{album.url}}"><i class="fa fa-play-circle" style="font-size:48px;color:blueviolet"></i></a>
                   
                  <!-- <button style="font-size:24px"> <a href="{{album.url}}"> <i class="fa fa-play"></i></a></button> -->
                 </mat-card-content>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { TrackService } from '../service/track.service';
 import { Trending } from '../Model/trending';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,14 @@ export class HomeComponent implements OnInit {
  p:any;
   listHindiSongs: Trending[]=[];
   hindilist: Trending[]=[];
-  constructor(private service:TrackService) { }
+
+  isLoggedIn$: boolean;
+
+  constructor(private service:TrackService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.getTrending();
+    this.isLoggedIn$=this.userService.getLoginStatus();
   }
 
   getTrending()

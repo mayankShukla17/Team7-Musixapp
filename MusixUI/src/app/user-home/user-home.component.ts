@@ -12,6 +12,7 @@ export class UserHomeComponent implements OnInit {
   p:any;
   listHindiSongs: Trending[]=[];
   hindilist: Trending[]=[];
+  audio:any;
   constructor(private service:TrackService) { }
 
   ngOnInit(): void {
@@ -38,4 +39,10 @@ export class UserHomeComponent implements OnInit {
     )
   }
 
+  // GetStation(audio)
+  // {
+  //     this.audio.src = audio.src;
+  //     this.audio.load();
+  //     this.audio.play();
+  // }
 }
